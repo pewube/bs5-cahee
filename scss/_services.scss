@@ -1,0 +1,134 @@
+.main {
+  .services {
+    background-color: $bgc-services;
+
+    &__container {
+      max-width: 1200px;
+      padding: 75px 15px 60px;
+    }
+
+    &__buttons {
+      margin-top: 45px;
+
+      button {
+        max-width: 400px;
+        height: 75px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px #888;
+        transition: background-color 0.2s, color 0.2s, border 0.2s;
+
+        .border-end {
+          border-color: #9d9d9d !important;
+          transition: 0.2s;
+        }
+
+        svg {
+          .icon-path {
+            transition: 0.2s;
+          }
+        }
+
+        &:hover {
+          color: $c-orange;
+          background-color: #fff;
+          border: 1px solid $c-orange;
+          box-shadow: 0 5px 15px #888;
+
+          .border-start {
+            border-color: $c-orange !important;
+          }
+
+          svg {
+            .icon-path {
+              fill: $c-orange;
+            }
+          }
+        }
+        &:active {
+          box-shadow: 0 0px 0px #888;
+        }
+      }
+    }
+
+    &__header {
+      img {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 3rem;
+        transform: translateY(50%);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    .services {
+      &__container {
+        padding: 110px 15px 90px;
+      }
+
+      &__buttons {
+        margin-top: 0;
+      }
+
+      &__header {
+        h1 {
+          padding-right: 15px;
+          transform: translateY(70%);
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    .services {
+      &__container {
+        padding: 170px 15px 140px;
+      }
+
+      &__buttons {
+        button {
+          width: 350px;
+          height: 90px;
+        }
+      }
+      &__header {
+        h1 {
+          padding-right: 15px;
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    .services {
+      &__buttons {
+        button {
+          width: 400px;
+          height: 100px;
+        }
+      }
+
+      &__header {
+        img {
+          margin-top: -120px;
+          margin-left: 0;
+        }
+
+        h1 {
+          font-size: 5.6rem;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

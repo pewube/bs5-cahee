@@ -1,0 +1,61 @@
+.main {
+  // background-color: rgb(253, 177, 114);
+  .home {
+    background-image: url(../img/main/bg-home.jpg);
+    background-repeat: no-repeat;
+    background-position: 60% 0;
+    background-size: cover;
+
+    &__container {
+      max-width: 1200px;
+      position: relative;
+    }
+    &__header {
+      padding: 15px;
+      margin-top: 50%;
+      margin-bottom: 40%;
+      background-color: rgba(255, 255, 255, 0.7);
+
+      h1 {
+        font-size: 3.5rem;
+      }
+      .btn {
+        @include default-button(#fff, $c-orange);
+      }
+    }
+
+    &__scroll-ico {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .main {
+    .home {
+      &__header {
+        margin-top: 30%;
+        margin-bottom: 30%;
+        background-color: transparent;
+      }
+
+      &__scroll-ico {
+        bottom: 4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .main {
+    .home {
+      height: 100vh;
+      max-height: 999px;
+      background-position: 50% 0;
+      background-size: contain;
+    }
+  }
+}

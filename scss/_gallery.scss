@@ -1,0 +1,87 @@
+.main {
+  .gallery {
+    background-color: $bgc-gallery;
+
+    &__container {
+      max-width: 1200px;
+      padding: 70px 15px;
+    }
+
+    &__header {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    &__pictures {
+      button {
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+          img {
+            transform: scale(1.02, 1.02);
+            box-shadow: 0 5px 15px #000;
+          }
+        }
+      }
+
+      img {
+        transition: 0.2s;
+        box-shadow: 0 2px 5px #888;
+      }
+
+      div {
+        button:first-child {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .btn {
+      @include default-button(#fff, #5585a2);
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .main {
+    .gallery {
+      &__header {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+
+      &__pictures {
+        div {
+          button:first-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    .gallery {
+      &__container {
+        padding: 110px 15px 70px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    .gallery {
+      &__header {
+        h1 {
+          font-size: 5.3rem;
+        }
+      }
+    }
+  }
+}
