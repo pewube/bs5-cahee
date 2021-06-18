@@ -1,83 +1,73 @@
-.main {
-  .blog {
-    background-color: $bgc-blog;
-    &__container {
-      max-width: 1200px;
-      padding: 60px 15px;
+.blog {
+  background-color: $bgc-blog;
+  &__container {
+    max-width: 1200px;
+    padding: 60px 15px;
 
-      .btn {
-        @include default-button(#fff, $c-red);
-      }
+    .btn {
+      @include default-button(#fff, $c-red);
+      padding-left: 48px;
+      padding-right: 48px;
     }
+  }
 
-    &__header {
-      h1 {
-        font-size: 3.2rem;
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__cards {
+    margin-bottom: 48px;
+    .card {
+      box-shadow: 0 2px 7px #555;
+
+      img {
+        transition: 0.2s;
       }
-    }
 
-    &__cards {
-      .card {
-        // height: 315px;
-        box-shadow: 0 2px 7px #555;
+      &:focus-within {
+        box-shadow: 0 5px 20px #000;
 
         img {
-          transition: 0.2s;
+          transform: scale(1.2, 1.2);
         }
+      }
 
-        &:hover {
-          box-shadow: 0 5px 20px #000;
-
-          img {
-            transform: scale(1.2, 1.2);
-          }
+      &-title {
+        &--day {
+          font-size: 2rem;
         }
-
-        &-title {
-          &--day {
-            font-size: 2rem;
-          }
-          &--month {
-            font-size: 1.3rem;
-          }
-        }
-
-        &-img-overlay {
-          background-image: linear-gradient(transparent 60%, #000);
-        }
-
-        &-text--plot {
-          padding-top: 3.8rem;
+        &--month {
           font-size: 1.3rem;
-          transition: 0.2s;
         }
+      }
 
-        &-text--author {
-          font-size: 0.8rem;
-        }
+      &-img-overlay {
+        background-image: linear-gradient(transparent 60%, #000);
+      }
 
-        .badge {
-          background-color: rgba(0, 0, 0, 0.3);
-        }
+      &-text--plot {
+        padding-top: 3.8rem;
+        font-size: 1.3rem;
+        transition: 0.2s;
+      }
+
+      &-text--author {
+        font-size: 0.8rem;
+      }
+
+      .badge {
+        background-color: rgba(0, 0, 0, 0.3);
       }
     }
   }
 }
 
 @media (min-width: 576px) {
-  .main {
-    .blog {
-      &__header {
-        h1 {
-          font-size: 4rem;
-        }
-      }
-
-      &__cards {
-        .card {
-          &-text--plot {
-            padding-top: 5rem;
-          }
+  .blog {
+    &__cards {
+      .card {
+        &-text--plot {
+          padding-top: 5rem;
         }
       }
     }
@@ -85,21 +75,19 @@
 }
 
 @media (min-width: 768px) {
-  .main {
-    .blog {
-      &__container {
-        padding: 110px 15px 120px;
-      }
+  .blog {
+    &__container {
+      padding: 110px 15px 120px;
     }
-  }
-}
 
-@media (min-width: 992px) {
-  .main {
-    .blog {
-      &__header {
-        h1 {
-          font-size: 5.3rem;
+    &__cards {
+      .card {
+        &:hover {
+          box-shadow: 0 5px 20px #000;
+
+          img {
+            transform: scale(1.2, 1.2);
+          }
         }
       }
     }

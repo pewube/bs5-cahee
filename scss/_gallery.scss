@@ -1,63 +1,60 @@
-.main {
-  .gallery {
-    background-color: $bgc-gallery;
+.gallery {
+  background-color: $bgc-gallery;
 
-    &__container {
-      max-width: 1200px;
-      padding: 70px 15px;
-    }
+  &__container {
+    max-width: 1200px;
+    padding: 70px 15px;
+  }
 
-    &__header {
-      h1 {
-        font-size: 3rem;
-      }
-    }
+  &__header {
+    margin-bottom: 32px;
+  }
 
-    &__pictures {
-      button {
-        border: none;
-        background-color: transparent;
+  &__pictures {
+    button {
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
+      background-color: transparent;
 
-        &:hover {
-          img {
-            transform: scale(1.02, 1.02);
-            box-shadow: 0 5px 15px #000;
-          }
+      &:focus {
+        img {
+          transform: scale(1.02, 1.02);
+          box-shadow: 0 5px 15px #000;
         }
       }
 
-      img {
-        transition: 0.2s;
-        box-shadow: 0 2px 5px #888;
-      }
-
-      div {
-        button:first-child {
-          margin-bottom: 25px;
-        }
+      &:focus-visible {
+        outline: none;
       }
     }
 
-    .btn {
-      @include default-button(#fff, #5585a2);
+    img {
+      transition: 0.2s;
+      box-shadow: 0 2px 5px #888;
     }
+
+    div {
+      button:first-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .btn {
+    @include default-button(#fff, #5585a2);
+    padding-left: 48px;
+    padding-right: 48px;
+    margin: 48px 0;
   }
 }
 
 @media (min-width: 576px) {
-  .main {
-    .gallery {
-      &__header {
-        h1 {
-          font-size: 4rem;
-        }
-      }
-
-      &__pictures {
-        div {
-          button:first-child {
-            margin-bottom: 0;
-          }
+  .gallery {
+    &__pictures {
+      div {
+        button:first-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -65,21 +62,18 @@
 }
 
 @media (min-width: 768px) {
-  .main {
-    .gallery {
-      &__container {
-        padding: 110px 15px 70px;
-      }
+  .gallery {
+    &__container {
+      padding: 110px 15px 70px;
     }
-  }
-}
 
-@media (min-width: 992px) {
-  .main {
-    .gallery {
-      &__header {
-        h1 {
-          font-size: 5.3rem;
+    &__pictures {
+      button {
+        &:hover {
+          img {
+            transform: scale(1.02, 1.02);
+            box-shadow: 0 5px 15px #000;
+          }
         }
       }
     }

@@ -1,11 +1,16 @@
 @mixin default-button($font-color, $bgc) {
   padding: 0.375rem 1.1rem;
-  color: $font-color;
-  line-height: 2.5rem;
   background-color: $bgc;
   box-shadow: 0 2px 5px #888;
   transition: background-color 0.2s, color 0.2s, border 0.2s;
-  &:hover {
+  color: $font-color;
+  line-height: 2.5rem;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
     color: $bgc;
     background-color: $font-color;
     border: 1px solid $bgc;

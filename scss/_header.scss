@@ -4,8 +4,14 @@
     background-color: rgb(248, 249, 250, 0.8);
     .container {
       max-width: 1200px;
+      padding: 0;
 
       .navbar-brand {
+        &:focus {
+          border-top: 1px solid $c-orange;
+          border-bottom: 1px solid $c-orange;
+        }
+
         img {
           width: 90px;
         }
@@ -25,9 +31,11 @@
             .nav-link {
               padding: 10px;
               color: #000;
+              font-weight: 700;
+              text-transform: uppercase;
               transition: border-color 0.3s, color 0.3s;
 
-              &:hover {
+              &:focus {
                 color: $c-orange;
               }
             }
@@ -42,7 +50,6 @@
   .header {
     .navbar {
       height: 100px;
-      padding: 10px 15px;
       background-color: rgb(248, 249, 250, 0.5);
       .container {
         .navbar-brand {
@@ -60,6 +67,9 @@
                 margin-left: 30px;
                 border-top: 3px solid transparent;
 
+                &:hover {
+                  color: $c-orange;
+                }
                 &.active {
                   border-color: $c-orange;
                 }
